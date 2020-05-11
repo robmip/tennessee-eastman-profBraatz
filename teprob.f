@@ -938,6 +938,7 @@ C
       DOUBLE PRECISION YY(NN),
      .YP(NN),
      .TIME
+C     Begin assigning Values to parameters     
       XMW(1)=2.0
       XMW(2)=25.4
       XMW(3)=28.0

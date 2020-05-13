@@ -661,6 +661,7 @@ C
       XST(I,7)=XST(I,6)
       FCM(I,7)=FCM(I,6)
  6130 CONTINUE
+ !    Begins calculate intern cooling heat
       IF(VLR/7.8.GT.50.0)THEN
       UARLEV=1.0
       ELSEIF(VLR/7.8.LT.10.0)THEN
@@ -697,6 +698,7 @@ C
       XMEAS(18)=TCC
       XMEAS(19)=QUC*1.04D3*0.454
       XMEAS(20)=CPDH*0.0003927D6
+! Why are there 2 consecutive equal asignations to XMEAS(20)?
       XMEAS(20)=CPDH*0.29307D3
       XMEAS(21)=TWR
       XMEAS(22)=TWS
@@ -787,6 +789,7 @@ C
      .HST(5)*FTM(5)+
      .HST(9)*FTM(9)-
      .HST(6)*FTM(6)
+! calculate internal cooling energy balance
       YP(37)=(FWR*500.53*
      .(TCWR-TWR)-QUR*1.D6/1.8)/HWR
       YP(38)=(FWS*500.53*
@@ -939,7 +942,7 @@ C
       DOUBLE PRECISION YY(NN),
      .YP(NN),
      .TIME
-!     Begin assigning Values to parameters     
+!     Begin assigning Values to compound parameters     
       XMW(1)=2.0
       XMW(2)=25.4
       XMW(3)=28.0

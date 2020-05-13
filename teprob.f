@@ -1495,6 +1495,8 @@ C
      .AV(8),
      .AD(8),BD(8),CD(8),
      .XMW(8)
+! Calculate liquid phase density
+! Why are the non-condensable included?
       DOUBLE PRECISION V,R,X(8),T
       INTEGER I
       V=0.0

@@ -500,6 +500,7 @@ C
       UCVR(I)=UTVR*XVR(I)
       UCVS(I)=UTVS*XVS(I)
  1140 CONTINUE
+ C    calculate reaction rates (iteratively)
       RR(1)=DEXP(31.5859536-40000.0/1.987/TKR)*R1F
       RR(2)=DEXP(3.00094014-20000.0/1.987/TKR)*R2F
       RR(3)=DEXP(53.4060443-60000.0/1.987/TKR)
